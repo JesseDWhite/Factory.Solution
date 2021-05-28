@@ -7,7 +7,7 @@
 * _C#_ 🆒
 * _.NET_ 🥅
 * _MySql_ 💽
-* _Entity Framwork_ 🎞
+* _Entity Framework_ 🎞
 ## Description 📜
 _Dr. Sillystrinz runs a growing imporium and has many elaborate machines to show the public. Because of this, he needs some help managing his engineers on staff and what machines they can and need to work on. This progam will allow D. Sillystringz to manage his working capitol, so they can focus on bigger things._
 ## Setup and Use 🏗
