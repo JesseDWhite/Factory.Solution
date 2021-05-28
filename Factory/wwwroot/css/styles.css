@@ -1,0 +1,57 @@
+div#footer {
+  position:fixed;
+  bottom:0px;
+  left:0px;
+  width:100%;
+  color:#CCC;
+  background:#023047;
+  padding:8px;
+  text-align: start;
+}
+main{
+  padding: 35px;
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+body {
+  background-color: #ffb703;
+}
+h1, h2, h3 {
+  text-align: center;
+  font-family: 'Satisfy', cursive;
+}
+.header {
+  background-color: #219ebc;
+  color: #023047;
+  border-radius: 25px;
+  padding: 20px;
+}
+#machine-card, #engineer-card {
+  margin: 30px;
+  padding: 30px;
+}
+.card {
+  border-radius: 25px;
+  min-height: 75vh;
+}
+#engineer-details, #machine-details {
+  text-align: center;
+  margin-top: 50px;
+}
+.create-button {
+  width: 100%;
+}
+button a {
+  color: white;
+  text-decoration: none;
+  width: 25px;
+}
+button a:hover {
+  color: white;
+  text-decoration: none;
+}
+section#main-page {
+  padding: 25px;
+  background-color: #8ecae6;
+  justify-content: center;
+}

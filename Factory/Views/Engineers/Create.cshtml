@@ -1,0 +1,23 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Engineer
+
+<h4>Add a new engineer</h4>
+
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model => model.Name)
+  @Html.TextBoxFor(model => model.Name, new {@class = "form-control", type="text", required="required"})
+
+  @Html.LabelFor(model => model.DateHired)
+  @Html.TextBoxFor(model => model.DateHired, new {@class = "form-control", type="date", required="required"})
+
+  @Html.LabelFor(model => model.Level,"Skill Level of Engineer")
+  @Html.TextBoxFor(model => model.Level, new {@class = "form-control", type="text", required="required"})
+
+  <input type="submit" value="Add New Engineer" class="btn btn-success mt-3 mb-3 create-button" />
+}
+
+<p>@Html.ActionLink("Show All Engineers", "Index")</p>

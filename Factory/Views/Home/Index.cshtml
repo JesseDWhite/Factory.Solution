@@ -1,0 +1,12 @@
+@{
+  Layout = "_Layout";
+}
+
+<h1>Welcome to the Dr. SillyStringz Imporium</h1>
+<h3>Use this program to keep track of your Machines and Engineers</h3>
+<section id="main-page" class="card">
+  <button class="btn btn-primary btn-lg mb-5">@Html.ActionLink("View All Engineers", "Index", "Engineers")</button>
+  <button class="btn btn-primary btn-lg">@Html.ActionLink("View All Machines", "Index",
+    "Machines")</button>
+  <button class="btn btn-primary btn-lg mt-5">@Html.ActionLink("View All Machines and Engineers", "Index", "MachineEngineers")</button>
+</section>

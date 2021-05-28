@@ -1,0 +1,50 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Engineer
+<div class="header">
+  <h2>@Html.DisplayFor(model => model.Name)</h2>
+  <h3>Engineer Information</h3>
+  <div class="row" id="engineer-details">
+    <div class="col-3">
+      <button class="btn btn-warning btn-sm">@Html.ActionLink("Back to All Engineers", "Index")</button>
+    </div>
+    <div class="col-3">
+      <button class="btn btn-warning btn-sm">@Html.ActionLink("Edit Engineer", "Edit", new { id = Model.EngineerId })</button>
+    </div>
+    <div class="col-3">
+      <button class="btn btn-warning btn-sm">@Html.ActionLink("Add Machine", "AddMachine", new { id = Model.EngineerId })</button>
+    </div>
+    <div class="col-3">
+      <button class="btn btn-warning btn-sm">@Html.ActionLink("Delete Engineer", "Delete", new { id = Model.EngineerId })</button>
+    </div>
+  </div>
+</div>
+<hr />
+
+<h5>Date Hired: @Html.DisplayFor(model => model.DateHired)</h5>
+<br>
+<h5>Engineer Level: @Html.DisplayFor(model => model.Level)</h5>
+<br>
+
+@if (@Model.JoinEntities.Count == 0)
+{
+  <p><em>@Html.DisplayFor(model => model.Name) does not have any machines they are assigned to yet</em></p>
+}
+else
+{
+  <h4>Machines @Html.DisplayFor(model => model.Name) can work on</h4>
+  <hr />
+  <ul>
+    @foreach (var join in Model.JoinEntities)
+    {
+      <li>@Html.ActionLink($"{@join.Machine.Name}", "Details", "Machines", new {id = join.Machine.MachineId}) @using (Html.BeginForm("DeleteEngineer", "Machines"))
+        {
+          @Html.Hidden("joinId", @join.MachineEngineerId)
+          <input type="submit" value="Remove From Machine" class="btn btn-danger btn-sm" />
+        }
+      </li>
+    }
+  </ul>
+}
