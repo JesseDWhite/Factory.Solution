@@ -14,15 +14,20 @@ main{
   margin-bottom: 100px;
 }
 body {
-  background-color: #ffb703;
+  background-image: url(../img/background-image-3.jpg);
+  background-size: 100%;
+}
+li {
+  font-size: 20px;
 }
 h1, h2, h3 {
   text-align: center;
   font-family: 'Satisfy', cursive;
 }
 .header {
-  background-color: #219ebc;
-  color: #023047;
+  background-image: url(../img/background-image-2.jpg);
+  background-size: 100%;
+  color: white;
   border-radius: 25px;
   padding: 20px;
 }
@@ -54,4 +59,6 @@ section#main-page {
   padding: 25px;
   background-color: #8ecae6;
   justify-content: center;
+  background-image: url(../img/background-image-2.jpg);
+  background-size: 100%;
 }
